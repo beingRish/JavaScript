@@ -1,6 +1,6 @@
 // Pure Functions should have these all are the characteristics:-
 
-    // 1. Predictable
+    // 1. Predictable -> Means whenever you call that function with the same input you should get the same output.
     // 2. Readable
     // 3. Reusable
     // 4. Testable
@@ -11,6 +11,8 @@ let message = "Good Morning";
 
 const greeting = (name) => {
     message = "Hello";
+
+    
     return `${message} ${name}`
 }
 
