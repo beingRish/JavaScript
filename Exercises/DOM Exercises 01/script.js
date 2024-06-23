@@ -19,7 +19,6 @@ link.href = 'https://forcemipsus.com/';
 link.innerText = 'Text generated using DOM Manipulation';
 document.body.appendChild(link);
 
-console.log(document.querySelector('a'));
 
 
 console.log('<====================> Exercise 3 <====================>');
