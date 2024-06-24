@@ -10,6 +10,11 @@ paragraph.innerHTML = paragraph.innerText
     .join(' ');
 
 
+
+
+
+
+
 console.log('<====================> Exercise 2 <====================>');
 
 // Add a link back to the source of the text after the paragraph tag. (https://forcemipsus.com/)
@@ -21,6 +26,10 @@ document.body.appendChild(link);
 
 
 
+
+
+
+
 console.log('<====================> Exercise 3 <====================>');
 
 // Split each new sentence on to a separate line in the paragraph text.
@@ -29,6 +38,11 @@ console.log('<====================> Exercise 3 <====================>');
 paragraph.innerHTML = paragraph.innerHTML
     .split('.')
     .join('. </p><p>' + '</p>') ;
+
+
+
+
+
 
 
 console.log('<====================> Exercise 4 <====================>');
@@ -44,6 +58,11 @@ document.body.insertBefore(wordCountElement, paragraph)
 console.log(wordCount);
 
 
+
+
+
+
+
 console.log('<====================> Exercise 5 <====================>');
 
 // Replace all questions marks (?) with thinking faces (🤔) and exclamation marks (!) with astonished faces (🤨)
@@ -55,6 +74,3 @@ paragraph.innerHTML = paragraph.innerHTML
         return (char === '?' ? char = '🤔' : char) && (char === '!' ? char = '🤨' : char)
     })
     .join('');
-
-
-
