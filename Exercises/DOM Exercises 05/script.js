@@ -1,0 +1,82 @@
+console.log('====================> Exercise 01 <====================>');
+
+// Add 3 additonal jobs to the 'jobs' selection of the page by copying the template in the initial 'job-card'.
+
+const job1 = document.querySelector('.jobs .job-card');
+const job2 = job1.cloneNode(true);
+const job3 = job1.cloneNode(true);
+const job4 = job1.cloneNode(true);
+
+job1.insertAdjacentElement('afterEnd', job2);
+job1.insertAdjacentElement('afterEnd', job3);
+job1.insertAdjacentElement('afterEnd', job4);
+
+
+
+
+
+
+
+console.log('<====================> Exercise 02 <====================>');
+
+// Update the job titles of the new jobs to be: JavaScript Developer, Java Developer, Python Developer.
+
+job2.querySelector('h3').innerText = 'Python Developer';
+job3.querySelector('h3').innerText = 'Java Developer';
+job4.querySelector('h3').innerText = 'JavaScript Developer';
+
+
+
+
+
+
+
+console.log('<====================> Exercise 03 <====================>');
+
+// Update the number of jobs listed in the hero section to indicate how many jobs you have listed in the 'Jobs section'.
+
+const jobs = document.querySelectorAll('.jobs .job-card')
+document.querySelector('#jobs-listed span').innerText = jobs.length;
+
+
+
+
+
+
+
+console.log('<====================> Exercise 04 <====================>');
+
+// Configure the search input box to filter jobs listed to only match the text that has been provided in the search. Check for the search text in the job title heading.
+
+document.querySelector('#search')
+    .addEventListener('keyup', (event) => {
+        const elem = event.target;
+        Array.from(document.querySelectorAll('.jobs .job-card'))
+            .forEach(job => {
+                const jobTitle = job.querySelector('h3').innerText;
+                if(!jobTitle.toLocaleLowerCase().includes(
+                    elem.value.toLocaleLowerCase())){
+                        job.style.display = 'none';
+                    }else{
+                        job.style.display = 'block';
+                    }
+            })
+            console.log(elem.value);
+    })
+
+
+
+
+
+
+
+console.log('<====================> Exercise 05 <====================>');
+
+// Configure the 'All jobs' button to reset the search and show all jobs available on the page.
+
+document.querySelector('#show-all')
+    .addEventListener('click', () => {
+        Array.from(document.querySelectorAll('.jobs .job-card'))
+            .forEach(job => job.style.display = 'block');
+        document.querySelector('#search').value = '';
+    })
