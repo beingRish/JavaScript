@@ -40,7 +40,12 @@ const products = [
     }
 ]
 
-products.sort((a,b) => {
-    return a.price - b.price;
-});
+// products.sort((a,b) => {
+//     return a.price - b.price;
+// });
+
+products.sort((a, b) => {
+    return a.name.localeCompare(b.name)
+})
+
 console.log(products);

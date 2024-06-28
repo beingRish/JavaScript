@@ -123,41 +123,7 @@ const accounts = [
 
 console.log('<====================> Exercise 1 <====================>');
 
-// The first account has nested arrays of tags in it's tag property.  Get a list of all tags for this account as a one-dimensional array.
+// The first account has nested arrays of tags in it's tag property. Get a list of all tags for this account as a one-dimensional array.
  
-
-
-
-
-
-
-
-// Check whether the tags for the first account includes the "consectetur" tag 
-
-
-
-
-
-
-
-// Get a list of all the tags for all the accounts and join them together as a string separated by commas.
-
-
-
-
-
-
-
-
-
-// Get a list of all the friends for all the user's accounts as an array (don't worry about duplicates)
-  
-
-
-
-
-
-
-
-
-// Get a list of all the friends for all users who are younger than 30 AND have a balance more than $1500
+const getResult = accounts => accounts[0].tags.flat();
+console.log(getResult(accounts));
