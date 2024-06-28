@@ -3,10 +3,6 @@
 
 console.log('<====================> Exercise 4 <====================>');
 
-const getFriends = accounts => accounts.map(account => {
-    const friendList = account.friends.filter(friend => friend.name)
-
-    return friendList
-})
+const getFriends = accounts => accounts.map(({friends}) => friends.map(({name}) => name)).flat();
 
 console.log(getFriends(accounts));

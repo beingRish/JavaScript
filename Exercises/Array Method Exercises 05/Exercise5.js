@@ -2,3 +2,6 @@
 
 console.log('<====================> Exercise 5 <====================>');
 
+const getFriendsList = accounts => accounts.filter(({balance, age}) => age <= 30 && parseInt(balance.replace(/\D/g, '')) > 1500).map(({friends}) => friends).flat()
+
+console.log(getFriendsList(accounts));
