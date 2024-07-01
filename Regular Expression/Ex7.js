@@ -1,4 +1,4 @@
-console.log('<====================> Exercise 6 <====================>');
+console.log('<====================> Exercise 7 <====================>');
 
 // Specify a range of characters using - meta character in Regular Expression
 
